@@ -1,38 +1,87 @@
-.App {
+/* App.css */
+
+/* Container for the news feed component */
+.news-feed {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Title of the news feed */
+.news-feed h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Dropdown menu for category selection */
+.news-feed select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Container for the news articles */
+.news-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Individual news item */
+.news-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.news-list li {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.news-list a {
+  text-decoration: none;
+  color: #333;
+}
+
+.news-list h2 {
+  font-size: 1.5rem;
+  margin: 0 0 10px 0;
+}
+
+.news-list p {
+  margin: 0 0 10px 0;
+}
+
+.news-list small {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .news-feed {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .news-feed h1 {
+    font-size: 1.5rem;
+  }
+
+  .news-feed select {
+    font-size: 0.875rem;
+  }
+
+  .news-list h2 {
+    font-size: 1.25rem;
+  }
+
+  .news-list p {
+    font-size: 0.875rem;
   }
 }
